@@ -24,7 +24,6 @@ pipeline {
                 junit 'src/reports/*-jupiter.xml'
             }
         }
-
         stage('Deploy'){
             steps{
                 sh 'cd src/ ; java App' 
