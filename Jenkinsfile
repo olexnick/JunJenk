@@ -10,7 +10,6 @@ pipeline {
                 [[credentialsId: 'github-ssh-key', url: 'https://github.com/olexnick/JunJenk.git']]]
             }
         }
-
         stage('Build'){
             steps{
                 sh 'mkdir lib'
