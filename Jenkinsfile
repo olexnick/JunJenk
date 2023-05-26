@@ -7,7 +7,7 @@ pipeline {
             steps{
                 cleanWs()
                 checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
-                [[credentialsId: 'PUBLIC_KEY', url: 'https://github.com/olexnick/JunJenk.git']]]
+                [[credentialsId: 'mac_pro_16', url: 'https://github.com/olexnick/JunJenk.git']]]
             }
         }
         stage('Build'){
