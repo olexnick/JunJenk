@@ -10,7 +10,7 @@ public class CloseTest extends BaseTest{
     @Test
     @DisplayName("😱")
     public void closeBrowser(){
-        closePage.closePage();
+        closePage.closeBrowser();
         System.out.println("закрываем браузер");
     }
 }

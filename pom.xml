@@ -41,6 +41,19 @@
             <version>${junit.platform.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.9.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Open Test Report dependencies -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-reporting</artifactId>
+            <version>1.9.3</version>
+            <scope>test</scope>
+        </dependency>
         <!-- End Junit5 -->
         <!--WebDriver manager-->
         <dependency>
@@ -115,21 +128,59 @@
             <scope>test</scope>
         </dependency>
 
+
     </dependencies>
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
                 <!--                <configuration>-->
-                <!--                    <skipTests>true</skipTests>-->
+                <!--                    <includes>-->
+
+                <!--                        <include>**/*GeneralSuiteTest.java</include>-->
+
+                <!--                    </includes>-->
+                <!--                    &lt;!&ndash;                    <testFailureIgnore>true</testFailureIgnore>&ndash;&gt;-->
+                <!--                    &lt;!&ndash;                    <test>Suite.Page2Test.java</test>&ndash;&gt;-->
+                <!--&lt;!&ndash;                    <test>Suite.General.GeneralSuiteTest.GeneralSuite</test>&ndash;&gt;-->
+
                 <!--                </configuration>-->
+                <!--                <configuration>-->
+                <!--                    <test>/Users/olexnick/Documents/ProjectsJAVA/Djooky/JunJenk/src/test/java/Suite/General/Suite.General.GeneralSuiteTest.java</test>-->
+                <!--                    <testFailureIgnore>true</testFailureIgnore>-->
+                <!--                                    <skipTests>true</skipTests>-->
+                <!--                    <includes>-->
+                <!--                        &lt;!&ndash;                                        <include>**/Suite.General.GeneralSuiteTest</include>&ndash;&gt;-->
+                <!--&lt;!&ndash;                        <include>**/Suite.General.GeneralSuiteTest.java</include>&ndash;&gt;-->
+                <!--                        <include>/Users/olexnick/Documents/ProjectsJAVA/Djooky/JunJenk/src/test/java/Suite/General/Suite.General.GeneralSuiteTest.java</include>-->
+                <!--&lt;!&ndash;                        <include>/Users/olexnick/Documents/ProjectsJAVA/Djooky/JunJenk/src/test/java/Suite/General/Suite.General.GeneralSuiteTest.java</include>&ndash;&gt;-->
+                <!--                /Users/olexnick/Documents/ProjectsJAVA/Djooky/JunJenk/src/test-->
+                <!--                    </includes>-->
+                <!--                javac -d target -cp target:junit-platform-console-standalone-1.7.2.jar src/test/java/Suite.Page2Test.java-->
+                <!--                </configuration>-->
+
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>4.0.0-M7</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>Suite.RunnerTest</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -142,5 +193,4 @@
             </plugin>
         </plugins>
     </reporting>
-
 </project>

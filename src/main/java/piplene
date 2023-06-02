@@ -1,0 +1,3 @@
+javac -cp .:src/lib/junit-platform-console-standalone-1.9.3.jar src/test/java/Suite/*.java src/test/java/Suite/All/*.java
+java -jar "/Users/olexnick/Documents/ProjectsJAVA/Djooky/JunJenk/target/JunJenk-1.0-SNAPSHOT.jar"
+JunJenk-1.0-SNAPSHOT.jar

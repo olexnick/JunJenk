@@ -4,7 +4,7 @@ import commonPage.BasePage;
 
 public class ClosePage extends BasePage {
 
-    public void closePage(){
-        System.out.println("страница pages.org.example.page.ClosePage ");
+    public void closeBrowser(){
+        System.out.println("Close browser");
     }
 }
