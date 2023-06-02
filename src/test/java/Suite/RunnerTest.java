@@ -40,10 +40,12 @@ public class RunnerTest {
         // You can access more information from the summary as needed
 
         // Print the test results
+        System.out.println("***********************");
         System.out.println("Total tests: " + totalTests);
         System.out.println("Successful tests: " + successfulTests);
         System.out.println("Failed tests: " + failedTests);
         System.out.println("Aborted tests: " + abortedTests);
+        System.out.println("***********************");
 
         LauncherDiscoveryRequest CreateArtistRequestBuilder = LauncherDiscoveryRequestBuilder
                 .request()
@@ -67,10 +69,12 @@ public class RunnerTest {
         // You can access more information from the summary as needed
 
         // Print the test results
+        System.out.println("***********************");
         System.out.println("Total tests: " + createArtistTotalTests);
         System.out.println("Successful tests: " + createArtistSuccessfulTests);
         System.out.println("Failed tests: " + createArtistFailedTests);
         System.out.println("Aborted tests: " + createArtistAbortedTests);
+        System.out.println("***********************");
 
     }
 }

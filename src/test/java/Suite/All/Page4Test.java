@@ -10,6 +10,5 @@ public class Page4Test extends BaseTest {
     public void page4Test(){
         System.out.println("страница 4 ");
         closePage.closeBrowser();
-        System.out.println("==========================================");
     }
 }
