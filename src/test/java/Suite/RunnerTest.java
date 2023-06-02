@@ -27,7 +27,7 @@ public class RunnerTest {
                 .build();
 
         // Execute the tests using the launcher and listener
-        launcher.execute(request, listener);
+        launcher.execute(request, listener );
 
         // Get the test execution summary
         TestExecutionSummary summary = listener.getSummary();
